@@ -9,17 +9,16 @@ function App() {
   useEffect(() => {
     axios.get("http://localhost:3001/posts").then((response) => {
       setListOfPosts(response.data);
-      console.log(response.data)
     });
   }, []);
   return (
     <div className="Forum">
       <Outlet/>
       <div> 
+      <Link to="addpost">Add a New Post</Link>
       {listOfPosts.map((value, key) => {
         return (
           <div>
-            <Link to="addpost">Add a New Post</Link>
             <div className="post">
               <div className="title"> {value.title} </div>
               <div className="body">{value.postText}</div>
