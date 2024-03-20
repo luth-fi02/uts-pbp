@@ -1,10 +1,11 @@
 .Page {
     color: black;
-    height: inherit;
+    height: auto;
     display: flex;
 }
 
 .Content {
     border: 2px black solid;
     width: 100%;
+    display: flex;
 }

@@ -13,8 +13,8 @@ function App() {
   }, []);
   return (
     <div  className="Page">
-      <Outlet />
       <div className="Content">
+      <Outlet />
         <div className="Forum"> 
             <Link to="addpost">Add a New Post</Link>
             {listOfPosts.map((value, key) => {
