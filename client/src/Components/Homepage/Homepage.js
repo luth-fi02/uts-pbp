@@ -4,9 +4,9 @@ import { Outlet } from 'react-router-dom';
 
 function Home() {
   return (
-    <div className='Homepage'>
+    <div className='Page' >
       <Outlet />
-      <div>
+      <div className='Content'>
       Home
       </div>
     </div>

@@ -1,12 +1,13 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom';
 import "./Messenger.css"
+import "../Page.css"
 
 function Messenger() {
   return (
-    <div className="Messenger">
+    <div className="Page">
       <Outlet />
-      <div>
+      <div className="Content">
        Messenger
       </div>
     </div>

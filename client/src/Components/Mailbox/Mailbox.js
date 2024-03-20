@@ -1,12 +1,13 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 import "./Mailbox.css";
+import "../Page.css";
 
 function Mailbox() {
   return (
-    <div className='Mailbox'>
+    <div className='Page'>
     <Outlet/>
-      <div>
+      <div className='Content'>
         Mailbox
       </div>
     </div>

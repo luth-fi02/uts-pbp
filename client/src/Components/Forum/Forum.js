@@ -12,21 +12,23 @@ function App() {
     });
   }, []);
   return (
-    <div className="Forum">
-      <Outlet/>
-      <div> 
-      <Link to="addpost">Add a New Post</Link>
-      {listOfPosts.map((value, key) => {
-        return (
-          <div>
-            <div className="post">
-              <div className="title"> {value.title} </div>
-              <div className="body">{value.postText}</div>
-              <div className="footer">{value.username}</div>
-            </div>
-          </div>
-        );
-      })}
+    <div  className="Page">
+      <Outlet />
+      <div className="Content">
+        <div className="Forum"> 
+            <Link to="addpost">Add a New Post</Link>
+            {listOfPosts.map((value, key) => {
+              return (
+                <div>
+                  <div className="post">
+                    <div className="title"> {value.title} </div>
+                    <div className="body">{value.postText}</div>
+                    <div className="footer">{value.username}</div>
+                  </div>
+                </div>
+              );
+            })}
+        </div>
       </div>
     </div>
   );

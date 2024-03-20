@@ -1,6 +1,11 @@
 .Homepage {
-    position: relative;
     color: black;
-    text-align: center;
     height: inherit;
+    display: flex;
+}
+
+.Home {
+ border: 2px black solid;
+ width: 100%;
+ text-align: center;
 }
