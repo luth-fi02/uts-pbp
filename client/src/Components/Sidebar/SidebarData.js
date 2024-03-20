@@ -5,6 +5,7 @@ import GroupIcon from '@mui/icons-material/Group';
 import ChatIcon from '@mui/icons-material/Chat';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import ForumIcon from '@mui/icons-material/Forum';
+import LogoutIcon from '@mui/icons-material/Logout';
 
 export const SidebarData =[
     {
@@ -37,4 +38,9 @@ export const SidebarData =[
         icon: <ForumIcon/>,
         link: "/forum",
     },
+    {
+        title: "Log Out",
+        icon: <LogoutIcon />,
+        link: "/loginpage",
+    }
 ]

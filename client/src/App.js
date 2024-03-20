@@ -8,21 +8,35 @@ import Employees from './Components/Employees/Employees';
 import Homepage from './Components/Homepage/Homepage';
 import Mailbox from './Components/Mailbox/Mailbox'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import AddPost from './Components/Forum/AddPost';
 
 function App() {
   return (
   <Router>
    <div className='App'>
-   <Sidebar />
       <Routes>
         <Route path="/" element={(<Loginpage />)} />
-        <Route path="/homepage" element={(<Homepage />, <Sidebar/>)} />
-        <Route path="/mailbox" element={(<Mailbox />, <Sidebar/>)} />
-        <Route path="/employees" element={(<Employees />, <Sidebar/>)} />
-        <Route path="/messenger" element={(<Messenger />, <Sidebar/>)} />
-        <Route path="/calendar" element={(<Calendar />, <Sidebar/>)} />
+        <Route path="/loginpage" element={(<Loginpage />)} />
+        <Route path="/homepage" element={(<Homepage />)}>
+          <Route path="" element={(<Sidebar />)} />
+        </ Route>
+        <Route path="/mailbox" element={(<Mailbox />)}>
+          <Route path="" element={(<Sidebar />)} />
+        </ Route>
+        <Route path="/employees" element={(<Employees />)}>
+          <Route path="" element={(<Sidebar />)} />
+        </ Route>
+        <Route path="/messenger" element={(<Messenger />)}>
+          <Route path="" element={(<Sidebar />)} />
+        </ Route>
+        <Route path="/calendar" element={(<Calendar />)}>
+          <Route path="" element={(<Sidebar />)} />
+        </ Route>
         <Route path="/forum" element={(<Forum />)}>
-        <Route path="" element={(<Sidebar />)} />
+          <Route path="" element={(<Sidebar />)} />
+          <Route path="addpost" element={(<AddPost />)}>
+            <Route path="" element={(<Sidebar />)} />
+          </Route>
         </ Route>
       </Routes>   
    </div>

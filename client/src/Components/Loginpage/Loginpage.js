@@ -14,10 +14,15 @@ function Login() {
             <button>Register</button>
         </div>
         <div className='Login'>
-          <h1>Registration</h1>
+          <h1>Login</h1>
           <input type='text' placeholder='Username...'/>
           <input type='password' placeholder='Passsword...'/>
-          <button> Register </button>
+          <button
+            onClick={()=> {
+              window.location.pathname = '/homepage';
+              }} >
+                 Login 
+          </button>
         </div>
     </div>
   )

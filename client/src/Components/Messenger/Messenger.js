@@ -1,9 +1,16 @@
 import React from 'react'
+import { Outlet } from 'react-router-dom';
+import "./Messenger.css"
 
-function Chat() {
+function Messenger() {
   return (
-    <div>Chat</div>
+    <div className="Messenger">
+      <Outlet />
+      <div>
+       Messenger
+      </div>
+    </div>
   )
 }
 
-export default Chat
+export default Messenger

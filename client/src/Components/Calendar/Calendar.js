@@ -1,8 +1,15 @@
-import React from 'react'
+import React from 'react';
+import "./Calendar.css";
+import { Outlet } from 'react-router-dom';
 
 function Calendar() {
   return (
-    <div>Calendar</div>
+    <div className="Calendar">
+     <Outlet />
+     <div>
+      Calendar
+      </div> 
+    </div>
   )
 }
 

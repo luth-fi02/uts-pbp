@@ -1,8 +1,15 @@
-import React from 'react'
+import React from 'react';
+import { Outlet } from 'react-router-dom';
+import "./Mailbox.css";
 
 function Mailbox() {
   return (
-    <div>Mailbox</div>
+    <div className='Mailbox'>
+    <Outlet/>
+      <div>
+        Mailbox
+      </div>
+    </div>
   )
 }
 
