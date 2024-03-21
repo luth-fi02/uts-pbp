@@ -13,5 +13,5 @@
 Client-only run.  
 cd client.  
 npm install.  
-Hapus isi dari AddPost.js Forum.js Post.js.  
+Hapus fungsi useeffect/axios dari AddPost.js Forum.js Post.js.  
 npm start
