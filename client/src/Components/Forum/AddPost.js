@@ -4,6 +4,9 @@ import "./Forum.css";
 import { Outlet } from 'react-router-dom';
 import "../Page.css";
 import * as Yup from 'yup';
+import axios from "axios";
+
+
 
 
 function AddPost() {
@@ -14,25 +17,29 @@ function AddPost() {
     };
 
     const validationSchema = Yup.object().shape ({
-        title: Yup.string().required,
-        postText: Yup.string().required,
-        username: Yup.string().max(30).required,
+        title: Yup.string().required(),
+        postText: Yup.string().required(),
+        username: Yup.string().max(30).required(),
     });
     
 
     const onSubmit = (data) => {
-        console.log(data);
+        axios.post("http://localhost:3001/posts", data).then((response) => {
+        console.log("Posted")
+        });
     };
   return (
     <div className='Page'>
-        <Outlet />
         <div className='Content'> 
+            <Outlet />
             <Formik   
-                className='AddPost' 
-                initialValues={initialValues} onSubmit={onSubmit} 
+                initialValues={initialValues} 
+                onSubmit={onSubmit}
+                validationSchema={validationSchema} 
             >
                     <Form className='formContainer'>
                         <label> Title:  </label>
+                        <ErrorMessage name="title" component="span" />
                         <Field 
                             id="inputAddPost" 
                             name="title" 
@@ -40,6 +47,7 @@ function AddPost() {
                         />
 
                         <label> Post:  </label>
+                        <ErrorMessage name="postText" component="span" />
                         <Field 
                             id="inputAddPost" 
                             name="postText" 
@@ -47,6 +55,7 @@ function AddPost() {
                         />
 
                         <label> Username:  </label>
+                        <ErrorMessage name="username" component="span" />
                         <Field 
                             id="inputAddPost" 
                             name="username" 

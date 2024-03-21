@@ -9,6 +9,7 @@ import Homepage from './Components/Homepage/Homepage';
 import Mailbox from './Components/Mailbox/Mailbox'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import AddPost from './Components/Forum/AddPost';
+import Post from './Components/Forum/Post';
 
 function App() {
   return (
@@ -34,10 +35,13 @@ function App() {
         </ Route>
         <Route path="/forum" element={(<Forum />)}>
           <Route path="" element={(<Sidebar />)} />
-          <Route path="addpost" element={(<AddPost />)}>
-            <Route path="" element={(<Sidebar />)} />
-          </Route>
         </ Route>
+        <Route path="/post/:id" element={(<Post />)}>
+          <Route path="" element={(<Sidebar />)} />
+        </ Route>
+        <Route path="addpost" element={(<AddPost />)}>
+            <Route path="" element={(<Sidebar />)} />
+        </Route>
       </Routes>   
    </div>
   </Router>
