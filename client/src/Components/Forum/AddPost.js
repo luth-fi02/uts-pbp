@@ -1,15 +1,13 @@
-import React from 'react';
+import  React, { useEffect, useState }  from 'react';
+import { Outlet, useParams, useNavigate } from 'react-router-dom';
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import "./Forum.css";
-import { Outlet } from 'react-router-dom';
 import "../Page.css";
 import * as Yup from 'yup';
 import axios from "axios";
 
-
-
-
 function AddPost() {
+
     const initialValues = {
         title: "",
         postText: "",
@@ -21,13 +19,14 @@ function AddPost() {
         postText: Yup.string().required(),
         username: Yup.string().max(30).required(),
     });
-    
 
+    let navigate = useNavigate ();
     const onSubmit = (data) => {
         axios.post("http://localhost:3001/posts", data).then((response) => {
-        console.log("Posted")
+          navigate(`/forum`);
         });
     };
+
   return (
     <div className='Page'>
         <div className='Content'> 
@@ -71,6 +70,7 @@ function AddPost() {
     </div>
   )
 }
+
 
 /* initialValues={} onSubmit={} validationSchema={} */
 
