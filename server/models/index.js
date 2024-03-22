@@ -14,10 +14,10 @@ if (config.use_env_variable) {
 } else {
   sequelize = new Sequelize({
     "username": "root",
-    "password": "yorunaka",
+    "password": "SATelIT123",
     "database": "forum",
     "host": "localhost",
-    "dialect": "mariadb"
+    "dialect": "mysql"
   });
 }
 
