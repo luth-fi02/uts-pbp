@@ -2,6 +2,7 @@
 * (+) Dashboard (belum upload).
 * (+) Homepage (belum upload).
 * (+) Calendar (belum upload).
+* (+) Employees (proses).
 * Forum + JWT Authentication.   
     1. Upload post ✓.  
     2. Delete.  
