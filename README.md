@@ -1,9 +1,10 @@
 ﻿# uts-pbp
+* (+) Dashboard (belum upload).  
 * Forum.   
     1. Upload post ✓.  
     2. Delete.  
     3.    Like.  
-    4.   Comment.  
+    4.   Comment ✓ (belum upload).  
 * Login/Register.  
     1.    Register.  
     2.   Login.  

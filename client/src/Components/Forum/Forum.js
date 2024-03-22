@@ -5,11 +5,12 @@ import { Outlet, Link, useNavigate } from "react-router-dom";
 
 function App() {
   const [listOfPosts, setListOfPosts] = useState([]);
-  const navigate = useNavigate (); 
+  let navigate = useNavigate (); 
 
   useEffect(() => {
     axios.get("http://localhost:3001/posts").then((response) => {
       setListOfPosts(response.data);
+      console.log(response.data)
     });
   }, []);
   return (

@@ -12,8 +12,12 @@
   "dependencies": {
     "bcrypt": "^5.1.1",
     "cors": "^2.8.5",
+<<<<<<< HEAD
     "express": "^4.17.1",
     "mariadb": "^3.2.3",
+=======
+    "express": "^4.19.1",
+>>>>>>> 15b038120dcde305c25e2913afc47a0b7596709b
     "mysql2": "^2.2.5",
     "nodemon": "^2.0.7",
     "sequelize": "^6.37.1",
