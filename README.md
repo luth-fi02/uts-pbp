@@ -9,7 +9,7 @@
     3. Like.  
     4. Comment ✓ (belum upload).  
 * Login/Register.    
-    1. Register.  
+    1. Register.  (WIP)
     2. Login.  
     3. Log out.  
     4. Forgot Password.
