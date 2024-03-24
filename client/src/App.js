@@ -1,5 +1,6 @@
 import './App.css';
-import Forum from './Components/Forum/Forum'
+import Forum from './Components/Forum/Forum';
+import Landingpage from './Components/Landingpage/Landingpage';
 import Loginpage from './Components/Loginpage/Loginpage';
 import Sidebar from './Components/Sidebar/Sidebar';
 import Calendar from './Components/Calendar/Calendar';
@@ -16,7 +17,7 @@ function App() {
   <Router>
    <div className='App'>
       <Routes>
-        <Route path="/" element={(<Loginpage />)} />
+        <Route path="/" element={(<Landingpage />)} />
         <Route path="/loginpage" element={(<Loginpage />)} />
         <Route path="/homepage" element={(<Homepage />)}>
           <Route path="" element={(<Sidebar />)} />

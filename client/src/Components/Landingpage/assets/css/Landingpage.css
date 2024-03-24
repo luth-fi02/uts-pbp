@@ -1,0 +1,304 @@
+:root {
+  --primary-color: #002b3e;
+  --secondary-color: #4ecbd6;
+  --thirdy-color: #edf1f2;
+}
+
+.navBar {
+  background-color: var(--thirdy-color);
+  font-family: "metropolis-bold", sans-serif;
+}
+
+.navBar .nav-list {
+  font-size: 1.5rem;
+  font-family: "metropolis-light", sans-serif;
+  margin-left: 30rem;
+  padding: 0.2rem 0;
+  gap: 2rem;
+}
+
+.navBar .sign-in {
+  font-family: "metropolis-light", sans-serif;
+  font-size: 1.2rem;
+}
+
+.navBar .sign-in a {
+  font-family: "metropolis-bold", sans-serif;
+}
+
+.slide-menu {
+  /* padding-top: 3.6rem;
+  padding-left: 2.6rem; */
+  padding: 3.6rem 1.5rem 0 2.6rem;
+  text-transform: uppercase;
+  animation-name: fadeInRight;
+  animation-duration: 1s;
+}
+
+.slide-title {
+  color: var(--secondary-color);
+  letter-spacing: 2px;
+}
+
+.header-content-list {
+  font-family: "metropolis-regular", sans-serif;
+  font-size: 1.6rem;
+  margin: 3.6rem 0 3rem 0;
+  padding: 0 0 1.8rem 0;
+  list-style: none;
+  counter-reset: ctr;
+}
+
+.header-content-list li {
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  line-height: 4.8rem;
+  position: relative;
+}
+
+.header-content-list li:last-child {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.header-content-list a {
+  display: block;
+  color: #ffffff;
+  position: relative;
+  padding-left: 3.5rem;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.header-content-list a:hover {
+  color: #ffffff;
+}
+
+.header-content-list a::before {
+  content: counter(ctr, decimal-leading-zero) ".";
+  counter-increment: ctr;
+  font-family: "metropolis-regular", sans-serif;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.25);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  position: absolute;
+  left: 3px;
+  top: 0;
+}
+
+.header-content-list a:hover::before {
+  color: var(--secondary-color);
+}
+
+.header-content-social {
+  list-style: none;
+  display: inline-block;
+  font-size: 1.8rem;
+  margin: 0;
+  animation-name: fadeInUp;
+  animation-duration: 3s;
+}
+
+.header-content-social li {
+  display: inline-block;
+  margin-right: 12px;
+  padding-left: 0;
+}
+
+.header-content-social li a {
+  color: rgba(255, 255, 255, 0.15);
+}
+
+.header-content-social li a:hover,
+.header-content-social li a:focus {
+  color: white;
+}
+.header-content-social li:last-child {
+  margin: 0;
+}
+
+.container-adv {
+  background-color: var(--thirdy-color);
+  padding: 5rem 10rem;
+  position: relative;
+  z-index: 999;
+}
+
+.cell {
+  margin: 2rem 15rem;
+  width: 75%;
+}
+
+.cell .cell-text h1 {
+  font-family: "metropolis-medium", sans-serif;
+}
+
+.cell .cell-text p {
+  font-family: "metropolis-light", sans-serif;
+  width: 100%;
+  line-height: 1.6em;
+  padding-left: 3px;
+}
+
+.container-inno {
+  background-color: var(--primary-color);
+  padding: 5.2rem 6rem;
+  position: relative;
+  z-index: 999;
+}
+
+.container-inno h1 {
+  color: var(--thirdy-color);
+  font-family: "metropolis-light";
+  margin-bottom: 2rem;
+}
+
+.container-inno .cards {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.container-inno .cards .card-innovation {
+  background-color: rgba(160, 160, 160, 0.1);
+  border: 0.7px solid #898e8f;
+  color: #ddd;
+  padding: 0 1rem 1.8rem;
+  width: 25rem;
+  height: 25rem;
+}
+
+.container-inno .cards .card-innovation .card-num,
+.container-inno .cards .card-innovation .card-title {
+  font-family: "metropolis-regular", sans-serif;
+  font-size: 1.7rem;
+}
+
+.container-inno .cards .card-innovation .card-num {
+  margin: 3rem 0;
+}
+
+.container-inno .cards .card-innovation .card-text {
+  margin-top: 1.3rem;
+  font-family: "metropolis-extralight", sans-serif;
+  font-size: 1.1rem;
+}
+
+.container-profile {
+  display: flex;
+  gap: 5rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+  padding: 8rem 0;
+  position: relative;
+  z-index: 999;
+  background-color: #fff;
+}
+
+.container-profile img {
+  width: 40%;
+  box-shadow: 3px 25px 46px rgba(0, 0, 0, 0.3);
+}
+
+.container-profile .profile {
+  width: 35%;
+}
+
+.container-profile .profile .profile-position {
+  text-transform: uppercase;
+  font-family: "metropolis-medium", sans-serif;
+  font-size: 1.7rem;
+}
+
+.container-profile .profile .profile-name {
+  font-family: "metropolis-regular", sans-serif;
+  font-size: 4.5rem;
+  margin: 1.5rem 0;
+}
+
+.container-profile .profile .profile-desc {
+  font-family: "metropolis-light", sans-serif;
+  font-size: 1.3rem;
+}
+
+.container-footer {
+  background-color: var(--thirdy-color);
+  padding: 4.8rem 7.8rem 1rem;
+}
+
+.container-footer .company {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.container-footer .company .company-desc {
+  width: 40%;
+}
+.container-footer .company .company-desc h3 {
+  font-family: "metropolis-bold", sans-serif;
+  font-size: 2.4rem;
+  margin-bottom: 1.4rem;
+}
+
+.container-footer .company .company-desc p {
+  font-family: "metropolis-light", sans-serif;
+  font-size: 1.2rem;
+}
+
+.container-footer .company img {
+  width: 30%;
+}
+
+.container-footer .company .company-info {
+  width: 30%;
+  text-align: end;
+}
+
+.container-footer .company .company-info h3 {
+  font-family: "metropolis-bold", sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.container-footer .company .company-info h4 {
+  font-family: "metropolis-light", sans-serif;
+  font-size: 1.3rem;
+  margin-bottom: 1.3rem;
+}
+
+.container-footer .footer {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container-footer .footer .copyright {
+  font-family: "metropolis-light", sans-serif;
+}
+
+.container-footer .footer .header-content-social li a {
+  color: #444;
+}
+
+.container-footer .footer .header-content-social li:nth-child(1):hover a {
+  color: #1877f2;
+}
+
+.container-footer .footer .header-content-social li:nth-child(2):hover a {
+  color: #1da1f2;
+}
+
+.container-footer .footer .header-content-social li:nth-child(3):hover a {
+  color: #e4405f;
+}
+
+.container-footer .footer .header-content-social li:nth-child(4):hover a {
+  color: #1769ff;
+}
+
+.container-footer .footer .header-content-social li:nth-child(5):hover a {
+  color: #ea4c89;
+}
