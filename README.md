@@ -9,9 +9,9 @@
     3. Like.  
     4. Comment ✓ (belum upload).  
 * Login/Register.    
-    1. Register.  (WIP)
-    2. Login.  
-    3. Log out.  
+    1. Register.  ✓ (belum upload)
+    2. Login.  ✓ (belum upload)
+    3. Log out.  ✓ (belum upload)
     4. Forgot Password.
 
 Client-only run.  
