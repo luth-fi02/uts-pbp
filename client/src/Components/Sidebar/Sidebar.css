@@ -1,4 +1,12 @@
-.Sidebar { 
+@import url("./fonts/fonts.css");
+
+:root {
+  --primary-color: #002b3e;
+  --secondary-color: #4ecbd6;
+  --thirdy-color: #edf1f2;
+}
+
+.Sidebar {
   width: 250px;
   min-height: 100vh;
   height: 100%;
@@ -8,10 +16,13 @@
   left: 0;
 }
 
-.SidebarList{
+.SidebarList {
   height: auto;
   padding: 0;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .SidebarList .row {
@@ -21,26 +32,35 @@
   margin: 0%;
   display: flex;
   flex-direction: row;
-  color:#edf1f2;
+  color: black;
   justify-content: center;
   align-items: center;
+  transition: 0.3s;
+  border-radius: 50px;
+  font-family: "metropolis-regular";
 }
 
-.SidebarList .row:hover{
-cursor: pointer;
-background-color: #3e5863;
+.SidebarList .row:hover {
+  cursor: pointer;
+  background-color: var(--secondary-color);
+  color: var(--thirdy-color);
 }
 
-.SidebarList #active{
-background-color: #3e5863;
+.SidebarList #active {
+  background-color: var(--secondary-color);
+  color: var(--thirdy-color);
 }
 
-.row #icon{
-flex: 30%;
-display: grid;
-place-items: center;
+.row #icon {
+  flex: 30%;
+  display: grid;
+  place-items: center;
 }
 
-.row #title{
-flex: 70%;
+.row #label {
+  flex: 70%;
+}
+
+.sidebar-title {
+  color: var(--secondary-color);
 }

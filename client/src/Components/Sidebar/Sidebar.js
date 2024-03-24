@@ -2,7 +2,7 @@ import React from 'react';
 import "./Sidebar.css";
 import { SidebarData } from './SidebarData';
 import { Outlet } from 'react-router-dom';
-
+import Logout from './Logout';
 
 function Sidebar() {
   return (
@@ -27,6 +27,7 @@ function Sidebar() {
          </li>
          )
        })}
+      <Outlet/>
       </ul>
     </div>
   )

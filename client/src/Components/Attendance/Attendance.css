@@ -1,0 +1,24 @@
+@import url("./fonts/fonts.css");
+
+:root {
+  --primary-color: #002b3e;
+  --secondary-color: #4ecbd6;
+  --thirdy-color: #edf1f2;
+}
+
+.attendance-content {
+  padding: 2rem;
+}
+
+.attendance-content .attendance-title {
+  font-size: 1.3rem;
+  font-family: "bold";
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+.attendance-content .attendance-date {
+  font-size: 1rem;
+  font-family: "metropolis-regular";
+  margin-bottom: 2.5rem;
+}

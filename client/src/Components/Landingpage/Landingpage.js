@@ -12,6 +12,8 @@ import "./assets/css/Landingpage.css"
 import "./assets/css/base.css";
 import "./assets/css/main.css";
 import "./assets/css/slideshow.css";
+import Usercheck from "../helpers/Usercheck";
+import Getuser from "../helpers/Getuser";
 // import "./assets/css/vendor.css";
 
 // import "./assets/js/modernizr.js";
@@ -20,6 +22,7 @@ import "./assets/css/slideshow.css";
 // import "./assets/js/main.js";
 
 function Header() {
+    let check=Usercheck();
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
@@ -82,10 +85,17 @@ function Header() {
                                 Contact
                             </a>
                         </li>
+                        
                         <li>
-                            <a href="/" title="login">
+                            { check ? (
+                            <a href="/homepage" title="login">
+                                Dashboard
+                            </a>
+                            ) : (
+                            <a href="/login" title="login">
                                 Login
                             </a>
+                            )}
                         </li>
                     </ul>
                     <ul className="header-content-social animate__animated animate__fadeInUp animate__slow animate__delay-1s">
@@ -198,6 +208,8 @@ function Home() {
 }
 
 function NavbarComponents() {
+    let userdata = Getuser();
+    let check=Usercheck();
     return (
         <Navbar data-bs-theme="light" className="navBar sticky-top p-4">
             <Container>
@@ -220,10 +232,16 @@ function NavbarComponents() {
                 </Nav>
                 <Navbar.Collapse className="justify-content-end">
                     <Navbar.Text className="sign-in text-decoration-none">
-                        Signed in as:{" "}
-                        <a className="text-decoration-none" href="/login">
+                    Signed in as:{" "}
+                        { check ? (
+                            <a className="text-decoration-none" href="/homepage">
+                            {userdata.username}
+                            </a>
+                            ) : (
+                            <a className="text-decoration-none" href="/login">
                             Guest | Login
-                        </a>
+                            </a>
+                        )}
                     </Navbar.Text>
                 </Navbar.Collapse>
             </Container>

@@ -13,6 +13,7 @@ function App() {
       console.log(response.data)
     });
   }, []);
+  
   return (
     <div  className="Page">
       <div className="Content">

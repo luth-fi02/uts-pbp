@@ -31,3 +31,11 @@
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
+.addCommentContainer input,
+button {
+  width: auto;
+  height: 50px;
+  border-radius: 8px;
+  border: none;
+}
