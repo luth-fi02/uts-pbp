@@ -57,9 +57,7 @@ function Messenger() {
         return (
           <p
             key={i}
-            className="chat"
-            data-aos="fade-up"
-            data-aos-duration="1000"
+            className="chat animate__animated animate__fadeInUp animate__faster"
           >
             {message}
           </p>
@@ -143,7 +141,7 @@ function Messenger() {
                 value={messageText}
                 onChange={(e) => setMessageText(e.target.value)}
               />
-              <SendIcon className="send-message" onClick={handleSubmit} />
+              <SendIcon fontSize="large" className="send-message" onClick={handleSubmit} />
             </div>
           </form>
         </div>
