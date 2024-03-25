@@ -4,7 +4,6 @@ import { SidebarData } from "./SidebarData";
 import Image from "react-bootstrap/Image";
 import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArrowRight";
 import KeyboardDoubleArrowLeftIcon from "@mui/icons-material/KeyboardDoubleArrowLeft";
-import { Outlet } from "react-router-dom";
 
 export default function SidebarOffcanvas() {
   const [show, setShow] = useState(false);
@@ -27,6 +26,7 @@ export default function SidebarOffcanvas() {
           padding: "3px",
           left: 0,
           cursor: "pointer",
+          zIndex: "1000"
         }}
       >
         {<KeyboardDoubleArrowRightIcon color="primary"></KeyboardDoubleArrowRightIcon>}
@@ -71,7 +71,6 @@ export default function SidebarOffcanvas() {
                 </li>
               );
             })}
-        <Outlet/>
           </ul>
         </Offcanvas.Body>
         <div
@@ -88,6 +87,7 @@ export default function SidebarOffcanvas() {
             right: "-34px",
             cursor: "pointer",
             padding: "3px",
+            zIndex: "100000"
           }}
         >
           {<KeyboardDoubleArrowLeftIcon color="primary"></KeyboardDoubleArrowLeftIcon>}

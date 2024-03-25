@@ -7,8 +7,8 @@
 }
 
 .Page {
-  height: 100vh;
-  /* overflow: hidden; */
+  display: flex;
+  justify-content: center;
 }
 
 .container-left {
@@ -45,6 +45,7 @@
   font-size: 0.7rem;
   margin-bottom: 0;
   text-transform: uppercase;
+  color: #555;
 }
 
 .content .detail h3 {

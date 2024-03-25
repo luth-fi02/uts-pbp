@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Calendar.css";
+import "./Schedule.css";
 import { Outlet } from "react-router-dom";
 import { march } from "./March";
 import Form from "react-bootstrap/Form";
@@ -83,7 +83,8 @@ export default function Calendar() {
           {march.map((date, i) => {
             const boxClassName = isLibur(date.jam_kerja);
             return (
-              <div className={boxClassName} key={i} onClick={handleShow}>
+              <div data-aos="fade-up"
+              data-aos-duration="1000" data-aos-delay={i*100} className={boxClassName} key={i} onClick={handleShow}>
                 <h2 className="date">{date.tanggal}</h2>
                 <h2 className="day">{date.hari}</h2>
                 <p>{date.jam_kerja}</p>

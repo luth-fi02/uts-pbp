@@ -4,6 +4,7 @@ export const march = [
     tahun: "2024",
     bulan: "Maret",
     tanggal: "1",
+    hari: "Fri", // Jumat
     jam_kerja: "09.00-17.00"
   },
   {
@@ -11,6 +12,7 @@ export const march = [
     tahun: "2024",
     bulan: "Maret",
     tanggal: "2",
+    hari: "Sat", // Sabtu
     jam_kerja: "Libur"
   },
   {
@@ -18,6 +20,7 @@ export const march = [
     tahun: "2024",
     bulan: "Maret",
     tanggal: "3",
+    hari: "Sun", // Minggu
     jam_kerja: "Libur"
   },
   {
@@ -25,6 +28,7 @@ export const march = [
     tahun: "2024",
     bulan: "Maret",
     tanggal: "4",
+    hari: "Mon", // Senin
     jam_kerja: "09.00-17.00"
   },
   {
@@ -32,6 +36,7 @@ export const march = [
     tahun: "2024",
     bulan: "Maret",
     tanggal: "5",
+    hari: "Tue", // Selasa
     jam_kerja: "09.00-17.00"
   },
   {
@@ -39,6 +44,7 @@ export const march = [
     tahun: "2024",
     bulan: "Maret",
     tanggal: "6",
+    hari: "Wed", // Rabu
     jam_kerja: "09.00-17.00"
   },
   {
@@ -46,6 +52,7 @@ export const march = [
     tahun: "2024",
     bulan: "Maret",
     tanggal: "7",
+    hari: "Thu", // Kamis
     jam_kerja: "09.00-17.00"
   },
   {
@@ -53,6 +60,7 @@ export const march = [
     tahun: "2024",
     bulan: "Maret",
     tanggal: "8",
+    hari: "Fri", // Jumat
     jam_kerja: "09.00-17.00"
   },
   {
@@ -60,6 +68,7 @@ export const march = [
     tahun: "2024",
     bulan: "Maret",
     tanggal: "9",
+    hari: "Sat", // Sabtu
     jam_kerja: "Libur"
   },
   {
@@ -67,6 +76,7 @@ export const march = [
     tahun: "2024",
     bulan: "Maret",
     tanggal: "10",
+    hari: "Sun", // Minggu
     jam_kerja: "Libur"
   },
   {
@@ -74,13 +84,15 @@ export const march = [
     tahun: "2024",
     bulan: "Maret",
     tanggal: "11",
-    jam_kerja: "Libur"
+    hari: "Mon", // Senin
+    jam_kerja: "09.00-17.00"
   },
   {
     id: "12",
     tahun: "2024",
     bulan: "Maret",
     tanggal: "12",
+    hari: "Tue", // Selasa
     jam_kerja: "09.00-17.00"
   },
   {
@@ -88,6 +100,7 @@ export const march = [
     tahun: "2024",
     bulan: "Maret",
     tanggal: "13",
+    hari: "Wed", // Rabu
     jam_kerja: "09.00-17.00"
   },
   {
@@ -95,6 +108,7 @@ export const march = [
     tahun: "2024",
     bulan: "Maret",
     tanggal: "14",
+    hari: "Thu", // Kamis
     jam_kerja: "09.00-17.00"
   },
   {
@@ -102,6 +116,7 @@ export const march = [
     tahun: "2024",
     bulan: "Maret",
     tanggal: "15",
+    hari: "Fri", // Jumat
     jam_kerja: "09.00-17.00"
   },
   {
@@ -109,6 +124,7 @@ export const march = [
     tahun: "2024",
     bulan: "Maret",
     tanggal: "16",
+    hari: "Sat", // Sabtu
     jam_kerja: "Libur"
   },
   {
@@ -116,6 +132,7 @@ export const march = [
     tahun: "2024",
     bulan: "Maret",
     tanggal: "17",
+    hari: "Sun", // Minggu
     jam_kerja: "Libur"
   },
   {
@@ -123,6 +140,7 @@ export const march = [
     tahun: "2024",
     bulan: "Maret",
     tanggal: "18",
+    hari: "Mon", // Senin
     jam_kerja: "09.00-17.00"
   },
   {
@@ -130,6 +148,7 @@ export const march = [
     tahun: "2024",
     bulan: "Maret",
     tanggal: "19",
+    hari: "Tue", // Selasa
     jam_kerja: "09.00-17.00"
   },
   {
@@ -137,6 +156,7 @@ export const march = [
     tahun: "2024",
     bulan: "Maret",
     tanggal: "20",
+    hari: "Wed", // Rabu
     jam_kerja: "09.00-17.00"
   },
   {
@@ -144,6 +164,7 @@ export const march = [
     tahun: "2024",
     bulan: "Maret",
     tanggal: "21",
+    hari: "Thu", // Kamis
     jam_kerja: "09.00-17.00"
   },
   {
@@ -151,6 +172,7 @@ export const march = [
     tahun: "2024",
     bulan: "Maret",
     tanggal: "22",
+    hari: "Fri", // Jumat
     jam_kerja: "09.00-17.00"
   },
   {
@@ -158,6 +180,7 @@ export const march = [
     tahun: "2024",
     bulan: "Maret",
     tanggal: "23",
+    hari: "Sat", // Sabtu
     jam_kerja: "Libur"
   },
   {
@@ -165,6 +188,7 @@ export const march = [
     tahun: "2024",
     bulan: "Maret",
     tanggal: "24",
+    hari: "Sun", // Minggu
     jam_kerja: "Libur"
   },
   {
@@ -172,6 +196,7 @@ export const march = [
     tahun: "2024",
     bulan: "Maret",
     tanggal: "25",
+    hari: "Mon", // Senin
     jam_kerja: "09.00-17.00"
   },
   {
@@ -179,6 +204,7 @@ export const march = [
     tahun: "2024",
     bulan: "Maret",
     tanggal: "26",
+    hari: "Tue", // Selasa
     jam_kerja: "09.00-17.00"
   },
   {
@@ -186,6 +212,7 @@ export const march = [
     tahun: "2024",
     bulan: "Maret",
     tanggal: "27",
+    hari: "Wed", // Rabu
     jam_kerja: "09.00-17.00"
   },
   {
@@ -193,6 +220,7 @@ export const march = [
     tahun: "2024",
     bulan: "Maret",
     tanggal: "28",
+    hari: "Thu", // Kamis
     jam_kerja: "09.00-17.00"
   },
   {
@@ -200,6 +228,7 @@ export const march = [
     tahun: "2024",
     bulan: "Maret",
     tanggal: "29",
+    hari: "Fri", // Jumat
     jam_kerja: "Libur"
   },
   {
@@ -207,6 +236,7 @@ export const march = [
     tahun: "2024",
     bulan: "Maret",
     tanggal: "30",
+    hari: "Sat", // Sabtu
     jam_kerja: "Libur"
   },
   {
@@ -214,6 +244,7 @@ export const march = [
     tahun: "2024",
     bulan: "Maret",
     tanggal: "31",
+    hari: "Sun", // Minggu
     jam_kerja: "Libur"
   }
-]
+];

@@ -4,38 +4,43 @@ import GroupIcon from '@mui/icons-material/Group';
 import ChatIcon from '@mui/icons-material/Chat';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import ForumIcon from '@mui/icons-material/Forum';
-import CoPresentIcon from '@mui/icons-material/CoPresent';
 import LogoutIcon from '@mui/icons-material/Logout';
+import AttendanceIcon from '@mui/icons-material/DomainVerification';
 
-export const SidebarData =[
+export const SidebarData = [
     {
         title: "Home",
-        icon: <HomeIcon/>,
+        icon: <HomeIcon />,
         link: "/homepage",
     },
     {
         title: "Attendance",
-        icon: <CoPresentIcon/>,
+        icon: <AttendanceIcon />,
         link: "/attendance",
     },
     {
         title: "Employees",
-        icon: <GroupIcon/>,
+        icon: <GroupIcon />,
         link: "/employees",
     },
     {
         title: "Messenger",
-        icon: <ChatIcon/>,
+        icon: <ChatIcon />,
         link: "/messenger",
     },
     {
-        title: "Calendar",
-        icon: <CalendarMonthIcon/>,
-        link: "/calendar",
+        title: "Schedule",
+        icon: <CalendarMonthIcon />,
+        link: "/schedule",
     },
     {
         title: "Forum",
-        icon: <ForumIcon/>,
+        icon: <ForumIcon />,
         link: "/forum",
+    },
+    {
+        title: "Log Out",
+        icon: <LogoutIcon />,
+        link: "/loginpage",
     }
 ]

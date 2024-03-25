@@ -39,6 +39,7 @@
   justify-content: center;
   flex-direction: row;
   gap: 1rem;
+  margin-top: 2.5rem;
 }
 
 .employees-container .cards-container .header {

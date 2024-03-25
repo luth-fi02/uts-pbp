@@ -8,6 +8,12 @@ import Image from "react-bootstrap/Image";
 import SendIcon from "@mui/icons-material/Send";
 
 function Employees() {
+  function delay(i) {
+    if (i === 0 || i === 3) return '200'
+    if (i === 1 || i === 4) return '400'
+    return '600'
+  }
+
   return (
     <div className="Page">
       <Outlet />
@@ -20,7 +26,8 @@ function Employees() {
         <div className="cards-container">
           {employees.map((employee, i) => {
             return (
-              <Card key={i} border="light" style={{ width: "24rem" }}>
+              <Card data-aos="zoom-in-up"
+                data-aos-duration="1000" data-aos-delay={delay(i)} key={i} border="light" style={{ width: "24rem" }}>
                 <Card.Header className="header">
                   <Image
                     style={{ width: "40px" }}
