@@ -8,7 +8,6 @@ import Calendar from './Components/Calendar/Calendar';
 import Messenger from './Components/Messenger/Messenger';
 import Employees from './Components/Employees/Employees';
 import Homepage from './Components/Homepage/Homepage';
-import Mailbox from './Components/Mailbox/Mailbox';
 import Logout from './Components/Sidebar/Logout';
 import AddPost from './Components/Forum/AddPost';
 import Post from './Components/Forum/Post';
@@ -25,27 +24,27 @@ import 'aos/dist/aos.css';
 AOS.init()
 
 function App() {
-  const [authState, setAuthState] = useState(false)   
-    useEffect(() => {
-      axios.get('http://localhost:3001/auth/auth', { headers: {
-        accessToken: localStorage.getItem('accessToken'),
-      }}).then((response) => {
-        if (response.data.error) {
-        setAuthState(false)
-        } else {
-        setAuthState(true);
-        }
-      })
-    }, [])
+  // const [authState, setAuthState] = useState(false)
+  //   useEffect(() => {
+  //     axios.get('http://localhost:3001/auth/auth', { headers: {
+  //       accessToken: localStorage.getItem('accessToken'),
+  //     }}).then((response) => {
+  //       if (response.data.error) {
+  //       setAuthState(false)
+  //       } else {
+  //       setAuthState(true);
+  //       }
+  //     })
+  //   }, [])
   return (
-  <AuthContext.Provider value ={{ authState, setAuthState }}>
+  // <AuthContext.Provider value ={{ authState, setAuthState }}>
   <Router>
    <div className='App'>
       <Routes>
         <Route path="/" element={(<Landingpage />)} />
         <Route path="/registration" element={(<Registration />)} />
         <Route path="/login" element={(<Login />)} />
-        { authState && (
+        {/* { authState && ( */}
           <>
         <Route path="/homepage" element={(<Homepage />)}>
           <Route path="" element={(<SidebarOffcanvas />)}>
@@ -88,11 +87,11 @@ function App() {
           </Route>
         </Route>
           </>
-        )}
-      </Routes>   
+        {/* )} */}
+      </Routes>
    </div>
   </Router>
-  </AuthContext.Provider>
+  // </AuthContext.Provider>
   );
 }
 
