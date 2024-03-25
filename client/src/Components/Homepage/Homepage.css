@@ -17,94 +17,115 @@
   /* width: 100%; */
 }
 
-.content {
+.home-content {
   padding: 1.8rem;
+  margin: 0 auto;
+  width: auto;
+  margin-top: 1.5rem;
 }
-
-.content h1 {
+.home-content .main-title {
   margin-left: 1rem;
   font-family: "bold";
-  font-size: 1rem;
+  font-size: 1.8rem;
+  letter-spacing: 0.7px;
+  color: #000;
 }
 
-.content .detail {
+.home-content .detail {
   background-color: #fff;
   padding: 1rem 1rem 0;
   border-radius: 25px;
   width: 35rem;
 }
 
-.content h2 {
-  font-family: "bold";
-  font-size: 1.3rem;
-  margin-bottom: -15px;
+.home-content .container-left .detail {
+  width: 60rem;
+  padding: 1.7rem;
+  margin-top: 0.8rem;
 }
 
-.content .detail h4 {
+.home-content .title {
   font-family: "bold";
-  font-size: 0.7rem;
+  font-size: 2rem;
+  margin-bottom: -8px;
+}
+
+.home-content .detail .identity {
+  font-family: "bold";
+  font-size: 1.2rem;
   margin-bottom: 0;
   text-transform: uppercase;
   color: #555;
 }
 
-.content .detail h3 {
+.home-content .detail .value {
   font-family: "metropolis-light";
-  font-size: 1.1rem;
-  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  margin-bottom: 1.4rem;
 }
 
-.content .container-right {
+.home-content .container-right {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-.content .container-right .image {
-  width: 22rem;
+.home-content .container-right .image {
+  width: 35rem;
   background-color: #fff;
-  padding: 1rem;
+  padding: 1.5rem 2rem;
   border-radius: 25px;
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 
-.content .container-right .image .avatar {
+.home-content .container-right .image .avatar {
   width: 200px;
 }
 
-.content .container-right .image .checkin {
+.home-content .container-right .image .checkin-button {
   font-family: "bold";
+  letter-spacing: 0;
   margin: 1rem;
-  padding: 0.4rem 2rem;
+  padding: 0rem 3.5rem;
+  height: 4.5rem;
   transition: 0.5s;
-  font-size: 1.2rem;
+  font-size: 1.8rem;
+  text-transform: capitalize;
+  margin-top: 1.5rem;
 }
 
-.content .container-right .image .checkin:hover {
-  font-size: 1.1rem;
-  padding: 0.3rem 1.8rem;
+.home-content .container-right .image .checkin-button:hover {
+  font-size: 1.5rem;
+  padding: 0rem 3rem;
+  height: 4rem;
 }
 
-.content .container-right .info {
-  width: 22rem;
+.home-content .container-right .info {
+  width: 35rem;
+  height: 100%;
   background-color: #fff;
   padding: 1rem;
   border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
 }
 
-.content .container-right .info h4 {
+.home-content .container-right .info .identity {
   text-align: center;
   font-family: "bold";
-  font-size: 0.7rem;
+  font-size: 1.2rem;
   margin-bottom: 0;
   text-transform: uppercase;
+  margin-top: 1.5rem;
 }
 
-.content .container-right .info h3 {
+.home-content .container-right .info .value {
   text-align: center;
   font-family: "metropolis-light";
-  font-size: 1.1rem;
-  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  margin-bottom: 0;
 }

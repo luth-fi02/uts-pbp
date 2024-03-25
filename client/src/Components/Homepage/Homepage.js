@@ -8,28 +8,28 @@ function Home() {
   return (
     <div className="Page">
       <Outlet />
-      <div className="content">
-        <h1>Employee Profile</h1>
+      <div className="home-content">
+        <h1 className="main-title">Employee Profile</h1>
         <div className="container-left">
           <div className="detail">
             <h2 className="title">General Information</h2>
-            <hr />
-            <h4>Name</h4>
-            <h3>John Terry</h3>
-            <h4>Age</h4>
-            <h3>22th</h3>
-            <h4>Gender</h4>
-            <h3>Male</h3>
-            <h4>Birth date</h4>
-            <h3>27 December 2003</h3>
-            <h4>Status</h4>
-            <h3>Not married</h3>
-            <h4>Email</h4>
-            <h3>JohnTerry@gmail.com</h3>
-            <h4>Phone Number</h4>
-            <h3>082121212121</h3>
-            <h4>Address</h4>
-            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
+            <hr style={{ marginBottom: "2rem" }} />
+            <h4 className="identity">Name</h4>
+            <h3 className="value">John Terry</h3>
+            <h4 className="identity">Age</h4>
+            <h3 className="value">22th</h3>
+            <h4 className="identity">Gender</h4>
+            <h3 className="value">Male</h3>
+            <h4 className="identity">Birth date</h4>
+            <h3 className="value">27 December 2003</h3>
+            <h4 className="identity">Status</h4>
+            <h3 className="value">Not married</h3>
+            <h4 className="identity">Email</h4>
+            <h3 className="value">JohnTerry@gmail.com</h3>
+            <h4 className="identity">Phone Number</h4>
+            <h3 className="value">082121212121</h3>
+            <h4 className="identity">Address</h4>
+            <h3 className="value">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
           </div>
           <div className="container-right">
             <div className="image">
@@ -40,15 +40,15 @@ function Home() {
                 src="../../../ceo.jpg"
                 rounded
               />
-              <Button className="checkin shadow-lg" variant="info">
+              <Button className="checkin-button shadow-lg" variant="info">
                 Check-in
               </Button>{" "}
             </div>
             <div className="info">
-              <h4>Title</h4>
-              <h3>Project Manager</h3>
-              <h4>Salary</h4>
-              <h3>Rp. 12.000.000 / month</h3>
+              <h4 className="identity">Title</h4>
+              <h3 className="value">Project Manager</h3>
+              <h4 className="identity">Salary</h4>
+              <h3 className="value">Rp. 12.000.000 / month</h3>
             </div>
           </div>
         </div>
