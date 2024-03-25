@@ -27,35 +27,35 @@ function Employees() {
           {employees.map((employee, i) => {
             return (
               <Card data-aos="zoom-in-up"
-                data-aos-duration="1000" data-aos-delay={delay(i)} key={i} border="light" style={{ width: "24rem" }}>
+                data-aos-duration="1000" data-aos-delay={delay(i)} key={i} border="light" style={{ width: "38rem" }}>
                 <Card.Header className="header">
                   <Image
-                    style={{ width: "40px" }}
+                    style={{ width: "40px", height: "40px" }}
                     src="../../../ceo.jpg"
                     roundedCircle
                   />
                   <div className="header-text">
-                    <h2>{employee.nama}</h2>
-                    <p>{employee.umur} years old</p>
+                    <h2 className="header-name">{employee.nama}</h2>
+                    <p className="header-age">{employee.umur} years old</p>
                   </div>
                   <div className="send-message">
-                    <a href="/messenger"><SendIcon></SendIcon></a>
+                    <a href="/messenger"><SendIcon fontSize="large"></SendIcon></a>
                   </div>
                 </Card.Header>
-                <Card.Body className="body">
-                  <div className="details position">
-                    <h3>Position</h3>
-                    <p>{employee.jabatan}</p>
-                  </div>
-                  <div className="details gender">
-                    <h3>Gender</h3>
-                    <p>{employee.gender}</p>
+                <Card.Body id="body" className="body">
+                  <div className="details">
+                    <h3 className="position-title">Position</h3>
+                    <p className="position-value">{employee.jabatan}</p>
                   </div>
                   <div className="details">
-                    <h3>Skills</h3>
+                    <h3 className="gender-title">Gender</h3>
+                    <p className="gender-value">{employee.gender}</p>
+                  </div>
+                  <div className="details">
+                    <h3 className="skills-title">Skills</h3>
                     <div className="skills">
                       {employee.skills.map((skill, i) => {
-                        return <p>{skill}</p>;
+                        return <p key={i}>{skill}</p>;
                       })}
                     </div>
                   </div>

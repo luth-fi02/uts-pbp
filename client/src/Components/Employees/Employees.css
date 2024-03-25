@@ -7,21 +7,22 @@
 }
 
 .employees-container {
-  padding: 2rem;
+  padding: 3rem;
   width: 100%;
 }
 
 .employees-container .title {
-  font-size: 1.8rem;
+  font-size: 2.8rem;
   font-family: "bold";
   text-align: center;
   width: 75%;
   margin: 0 auto;
+  letter-spacing: 0.15px;
 }
 
 .employees-container .info {
   font-family: "metropolis-extralight";
-  font-size: 0.8rem;
+  font-size: 1.3rem;
   text-align: center;
   margin-bottom: 3rem;
   width: 75%;
@@ -38,8 +39,8 @@
   flex-wrap: wrap;
   justify-content: center;
   flex-direction: row;
-  gap: 1rem;
-  margin-top: 2.5rem;
+  gap: 2rem;
+  margin-top: 3.2rem;
 }
 
 .employees-container .cards-container .header {
@@ -47,6 +48,7 @@
   gap: 1rem;
   padding: 0.8rem;
   position: relative;
+  align-items: center;
 }
 
 .employees-container .cards-container .header .header-text {
@@ -55,28 +57,28 @@
   gap: 0.1px;
 }
 
-.employees-container .cards-container .header .header-text h2 {
+.employees-container .cards-container .header .header-text .header-name {
   font-family: "bold";
-  font-size: 1.2rem;
+  font-size: 2rem;
   margin-bottom: 0;
 }
 
-.employees-container .cards-container .header .header-text p {
+.employees-container .cards-container .header .header-text .header-age {
   font-family: "metropolis-light";
-  font-size: 0.7rem;
+  font-size: 1.1rem;
   margin-bottom: 0;
 }
 
 .employees-container .cards-container .header .send-message {
   display: flex;
   gap: 0.7rem;
-  padding: 0.5rem 0.9rem;
+  /* padding: 1rem 2.3rem; */
   width: 2.6rem;
   border-radius: 50px;
   color: var(--secondary-color);
   position: absolute;
-  top: 0.75rem;
-  right: 0.75rem;
+  top: 1.3rem;
+  right: 1.3rem;
   transform: rotate(-40deg);
   transition: 0.5s;
 }
@@ -85,24 +87,34 @@
   transform: rotate(0deg);
 }
 
-.employees-container .cards-container .body .details {
+.employees-container .cards-container #body {
+  padding: 2rem;
+  padding-top: 0;
+}
+
+.employees-container .cards-container #body .details {
   margin-bottom: 0.9rem;
 }
 
-.employees-container .cards-container .body .details h3 {
+.employees-container .cards-container #body .details .position-title,
+.employees-container .cards-container #body .details .gender-title,
+.employees-container .cards-container #body .details .skills-title {
   color: #333;
-  font-size: 0.6rem;
+  font-size: 0.9rem;
   font-family: "metropolis-light";
-  margin-bottom: 0.1rem;
+  margin-bottom: 0.6rem;
   text-transform: uppercase;
+  margin-top: 2rem;
 }
 
-.employees-container .cards-container .body .details p {
-  padding: 0.3rem 1rem;
+.employees-container .cards-container #body .details .position-value,
+.employees-container .cards-container #body .details .gender-value,
+.employees-container .cards-container #body .details .skills p {
+  padding: 0.6rem 1.3rem;
   font-family: "metropolis-regular";
   background-color: #edeff3;
-  border-radius: 50px;
-  font-size: 0.8rem;
+  border-radius: 10px;
+  font-size: 1.2rem;
   display: inline;
   margin-bottom: 0;
 }
