@@ -31,17 +31,14 @@
   color: #000;
 }
 
-.home-content .detail {
+.home-content .container-left .detail {
   background-color: #fff;
   padding: 1rem 1rem 0;
   border-radius: 25px;
   width: 35rem;
-}
-
-.home-content .container-left .detail {
   width: 60rem;
   padding: 1.7rem;
-  margin-top: 0.8rem;
+  margin-top: 0rem;
 }
 
 .home-content .title {
