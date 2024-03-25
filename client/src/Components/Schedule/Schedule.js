@@ -69,7 +69,7 @@ export default function Calendar() {
       <Outlet />
       <div className="schedule-content">
         <div className="container-header">
-          <h1 className="title">
+          <h1 className="main-title">
             March 2024 <span>Schedule</span>
           </h1>
           <div className="request-button">
@@ -84,7 +84,7 @@ export default function Calendar() {
             const boxClassName = isLibur(date.jam_kerja);
             return (
               <div data-aos="fade-up"
-              data-aos-duration="1000" data-aos-delay={i*100} className={boxClassName} key={i} onClick={handleShow}>
+                data-aos-duration="1000" data-aos-delay={i * 100} className={boxClassName} key={i} onClick={handleShow}>
                 <h2 className="date">{date.tanggal}</h2>
                 <h2 className="day">{date.hari}</h2>
                 <p>{date.jam_kerja}</p>
@@ -128,11 +128,12 @@ export default function Calendar() {
                       classname="form-input"
                       controlId="floatingInput"
                       label="Fullname"
-                      className="mb-3 text-body-secondary"
+                      className="mb-5"
                     >
                       <Form.Control
                         type="email"
                         placeholder="name@example.com"
+                        className="fs-5"
                       />
                     </FloatingLabel>
                   </Form.Group>
@@ -148,7 +149,7 @@ export default function Calendar() {
                       controlId="floatingSelect"
                       label="Your job position"
                     >
-                      <Form.Select aria-label="Floating label select example">
+                      <Form.Select aria-label="Floating label select example" className="fs-5">
                         <option>System Analyst</option>
                         <option value="1">Front-end Developer</option>
                         <option value="2">Back-end Developer</option>
@@ -174,6 +175,7 @@ export default function Calendar() {
                       <Form.Control
                         type="email"
                         placeholder="name@example.com"
+                        className="fs-5"
                       />
                     </FloatingLabel>
                   </Form.Group>
@@ -193,6 +195,7 @@ export default function Calendar() {
                       <Form.Control
                         type="email"
                         placeholder="name@example.com"
+                        className="fs-5"
                       />
                     </FloatingLabel>
                   </Form.Group>
@@ -212,6 +215,7 @@ export default function Calendar() {
                       <Form.Control
                         type="email"
                         placeholder="name@example.com"
+                        className="fs-5"
                       />
                     </FloatingLabel>
                   </Form.Group>
@@ -297,10 +301,10 @@ export default function Calendar() {
                       label="Type here..."
                     >
                       <Form.Control
-                        className="form-input"
+                        className="form-input fs-5"
                         as="textarea"
                         placeholder="Leave a comment here"
-                        style={{ height: "100px" }}
+                        style={{ height: "100px", fontSize: '10rem' }}
                       />
                     </FloatingLabel>
                   </Form.Group>

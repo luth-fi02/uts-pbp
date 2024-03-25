@@ -93,7 +93,7 @@ function App() {
           </Routes>
         </div>
       </Router>
-    </AuthContext.Provider>
+  </AuthContext.Provider>
   );
 }
 

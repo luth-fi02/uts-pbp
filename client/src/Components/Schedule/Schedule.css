@@ -7,7 +7,7 @@
 }
 
 .schedule-content {
-  padding: 2rem;
+  padding: 4rem;
 }
 
 .schedule-content .container-header {
@@ -16,26 +16,28 @@
   justify-content: space-between;
 }
 
-.schedule-content .title {
-  font-size: 1.7rem;
+.schedule-content .container-header .main-title {
+  font-size: 3rem;
+  font-family: "bold";
+  letter-spacing: 0.1px;
 }
 
-.schedule-content .title span {
+.schedule-content .container-header .main-title span {
+  font-size: 3rem;
   color: var(--secondary-color);
 }
 
 .schedule-content .request-button {
-  padding: 0.6rem 1.2rem;
+  padding: 0.6rem 1.8rem;
   border-radius: 20px;
   border: 1px solid var(--secondary-color);
   color: var(--secondary-color);
   transition: 0.8s;
-  font-size: 1.2rem;
 }
 
 .schedule-content .request-button a {
-  font-size: 1rem;
-  font-family: "metropolis-thin";
+  font-size: 1.5rem;
+  font-family: "metropolis-light";
   margin-bottom: 0;
   text-decoration: none;
   color: var(--secondary-color);
@@ -66,7 +68,7 @@
 .schedule-content .container {
   background-color: #fff;
   border-radius: 10px;
-  width: 61rem;
+  width: 85rem;
   display: flex;
   flex-wrap: wrap;
   border: 3px solid #fff;
@@ -75,8 +77,8 @@
 }
 
 .schedule-content .container .date-box {
-  width: 8rem;
-  height: 5rem;
+  width: 12rem;
+  height: 7.5rem;
   padding: 0.8rem;
   position: relative;
   border-top-right-radius: 10px;
@@ -113,12 +115,12 @@
 }
 
 .schedule-content .container .date-box .date {
-  font-size: 0.9rem;
+  font-size: 1.4rem;
   font-family: "bold";
 }
 
 .schedule-content .container .date-box .day {
-  font-size: 0.8rem;
+  font-size: 1.2rem;
   font-family: "bold";
   top: 8px;
   right: 8px;
@@ -131,6 +133,7 @@
   position: absolute;
   bottom: 5px;
   right: 5px;
+  font-size: 1.5rem;
 }
 
 .schedule-content .container .date-box:hover {
@@ -155,9 +158,10 @@
 }
 
 .request-container .title {
-  font-size: 2.5rem;
+  font-size: 4rem;
   font-family: "metropolis-light";
   padding-top: 2rem;
+  letter-spacing: 0.1px;
 }
 
 .schedule-content .request-container span {
@@ -166,9 +170,9 @@
 }
 
 .schedule-content .request-container .application {
-  margin-top: 2rem;
+  margin-top: 2.5rem;
   border: 2px solid black;
-  padding: 1.4rem 1.2rem;
+  padding: 2rem;
   box-shadow: 12px 12px 0px 1px #000;
 }
 
@@ -179,14 +183,15 @@
 }
 
 .schedule-content .request-container .application .apply-header-left h2 {
-  font-size: 2rem;
+  font-size: 3rem;
   margin-bottom: 0;
+  font-family: "metropolis-medium";
 }
 
 .schedule-content .request-container .application .apply-header-left p {
   margin-top: 0rem;
   font-family: "metropolis-thin";
-  font-size: 0.9rem;
+  font-size: 1.5rem;
   color: #333;
 }
 
@@ -197,9 +202,10 @@
 }
 
 .schedule-content .request-container .application .apply-header-right h3 {
-  font-size: 1.7rem;
+  font-size: 3rem;
   font-family: "bold";
   margin-bottom: -5px;
+  margin-left: -1rem;
 }
 
 .schedule-content .request-container .application .apply-header-right span {
@@ -212,7 +218,7 @@
 }
 
 .schedule-content .request-container .application Form h3 {
-  font-size: 1.6rem;
+  font-size: 2.6rem;
   font-family: "bold";
   text-align: center;
   margin-bottom: 1.7rem;
@@ -220,19 +226,21 @@
 
 .schedule-content .request-container .application Form .form-label {
   font-family: "metropolis-extralight";
-  font-size: 0.8rem;
+  font-size: 1.2rem;
   margin-left: 3px;
-  margin-bottom: 0;
+  margin-bottom: 0.4rem;
 }
 
 .schedule-content .request-container .application Form .form-input {
-  font-family: "metropolis-light  ";
+  font-family: "metropolis-light";
+  font-size: 1.5rem;
 }
 
 .schedule-content .request-container .application Form .send-request {
+  height: 4.3rem;
   padding: 0.5rem 0.9rem;
   font-family: "metropolis-light";
-  font-size: 1.2rem;
+  font-size: 2rem;
   outline: none;
   color: var(--secondary-color);
   border-radius: 10px;
@@ -244,6 +252,7 @@
   text-align: center;
   background-color: var(--secondary-color);
   color: #fff;
+  letter-spacing: 0.1px;
 }
 
 .schedule-content .request-container .application Form .send-request:hover {

@@ -17,7 +17,7 @@
   color: #fff;
   min-height: 100vh;
   flex-basis: 30%;
-  padding: 2.5rem 2rem;
+  padding: 4rem 3rem;
   position: fixed;
   width: 30%;
   z-index: 999;
@@ -25,28 +25,29 @@
 
 .messenger-content .person-list .workspace,
 .messenger-content .person-list .member {
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
 }
 
 .messenger-content .person-list .workspace .workspace-title,
 .messenger-content .person-list .member .member-title {
   text-transform: uppercase;
   font-family: "metropolis-light";
-  font-size: 0.8rem;
+  font-size: 1.2rem;
   color: #ccc;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .messenger-content .person-list .workspace ul,
 .messenger-content .person-list .member ul {
   padding-left: 0.5rem;
+  margin-left: 0;
 }
 
 .messenger-content .person-list .workspace ul .workspace-list,
 .messenger-content .person-list .member ul .member-list {
   list-style: none;
   font-family: "metropolis-medium";
-  font-size: 0.9rem;
+  font-size: 1.5rem;
   color: #fff;
   margin-bottom: 0.5rem;
   transition: 0.3s;
@@ -68,7 +69,7 @@
 }
 
 .messenger-content .chat-container .chat-header {
-  padding: 0.9rem 1.8rem;
+  padding: 1.4rem 2.5rem;
   background-color: #161819;
   border-left: 1px solid #ccc;
   position: fixed;
@@ -79,14 +80,14 @@
 
 .messenger-content .chat-container .chat-header .dest-name {
   font-family: "bold";
-  font-size: 1.2rem;
+  font-size: 2rem;
   margin-bottom: 0;
   color: #fff;
 }
 
 .messenger-content .chat-container .chat-header .desc {
   font-family: "metropolis-light";
-  font-size: 0.6rem;
+  font-size: 0.9rem;
   margin-bottom: 0;
   color: #fff;
 }
@@ -97,7 +98,7 @@
   flex-direction: column;
   align-items: end;
   position: fixed;
-  bottom: 2.5rem;
+  bottom: 6rem;
   right: 0;
   overflow-y: auto;
   max-height: 80vh;
@@ -106,13 +107,16 @@
 }
 
 .messenger-content .chat-container .chat-box .chat {
-  padding: 1rem 1.4rem;
+  padding: 1.3rem 2rem;
   background-color: #4ecbd6;
   font-family: "metropolis-regular";
-  font-size: 1rem;
-  border-radius: 20px;
+  font-size: 1.7rem;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
   width: 60%;
   position: relative;
+  transition: 1s;
 }
 
 .messenger-content .chat-container .chat-box .message-empty {
@@ -134,18 +138,21 @@
 
 .messenger-content .chat-container .type-box input {
   width: 100%;
-  padding: 1rem;
+  height: 5.5rem;
+  padding: 0.5rem 2rem;
   outline: none;
   border: none;
   border-radius: 20px;
   background-color: #242627;
   color: white;
+  margin-left: -0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .messenger-content .chat-container .type-box .send-message {
   position: absolute;
   cursor: pointer;
-  right: 1rem;
+  right: 2rem;
   color: #0d6efd;
   top: 50%;
   transform: translateY(-50%);
