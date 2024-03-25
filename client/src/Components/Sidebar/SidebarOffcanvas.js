@@ -26,18 +26,22 @@ export default function SidebarOffcanvas() {
           padding: "3px",
           left: 0,
           cursor: "pointer",
-          zIndex: "1000"
+          zIndex: "1000",
+          fontSize: '3rem',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center'
         }}
       >
-        {<KeyboardDoubleArrowRightIcon color="primary"></KeyboardDoubleArrowRightIcon>}
+        {<KeyboardDoubleArrowRightIcon fontSize="inherit" color="primary"></KeyboardDoubleArrowRightIcon>}
       </div>
       <Offcanvas
         show={show}
         backdrop={false}
         scroll={true}
-        style={{ width: "23rem" }}
+        style={{ width: "37rem", padding: '0 1rem' }}
       >
-        <Offcanvas.Header>
+        <Offcanvas.Header style={{ padding: "1.7rem 1.5rem" }}>
           <Image
             className="avatar"
             style={{ width: "40px" }}
@@ -47,7 +51,7 @@ export default function SidebarOffcanvas() {
           <Offcanvas.Title
             style={{
               fontFamily: "bold",
-              fontSize: "1.2rem",
+              fontSize: "2rem",
               marginTop: "2.5px",
             }}
           >
@@ -86,11 +90,14 @@ export default function SidebarOffcanvas() {
             position: "absolute",
             right: "-34px",
             cursor: "pointer",
-            padding: "3px",
-            zIndex: "100000"
+            zIndex: "100000",
+            fontSize: '3rem',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center'
           }}
         >
-          {<KeyboardDoubleArrowLeftIcon color="primary"></KeyboardDoubleArrowLeftIcon>}
+          {<KeyboardDoubleArrowLeftIcon fontSize="inherit" color="primary"></KeyboardDoubleArrowLeftIcon>}
         </div>
       </Offcanvas>
     </>

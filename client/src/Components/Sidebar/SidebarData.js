@@ -10,37 +10,37 @@ import AttendanceIcon from '@mui/icons-material/DomainVerification';
 export const SidebarData = [
     {
         title: "Home",
-        icon: <HomeIcon />,
+        icon: <HomeIcon fontSize='inherit' />,
         link: "/homepage",
     },
     {
         title: "Attendance",
-        icon: <AttendanceIcon />,
+        icon: <AttendanceIcon fontSize='inherit' />,
         link: "/attendance",
     },
     {
         title: "Employees",
-        icon: <GroupIcon />,
+        icon: <GroupIcon fontSize='inherit' />,
         link: "/employees",
     },
     {
         title: "Messenger",
-        icon: <ChatIcon />,
+        icon: <ChatIcon fontSize='inherit' />,
         link: "/messenger",
     },
     {
         title: "Schedule",
-        icon: <CalendarMonthIcon />,
+        icon: <CalendarMonthIcon fontSize='inherit' />,
         link: "/schedule",
     },
     {
         title: "Forum",
-        icon: <ForumIcon />,
+        icon: <ForumIcon fontSize='inherit' />,
         link: "/forum",
     },
     {
         title: "Log Out",
-        icon: <LogoutIcon />,
+        icon: <LogoutIcon fontSize='inherit' />,
         link: "/loginpage",
     }
 ]
