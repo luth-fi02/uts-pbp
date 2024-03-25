@@ -57,11 +57,6 @@ function App() {
             <Route path="" element={(<Logout/>)}/>
           </Route>
         </ Route>
-        <Route path="/mailbox" element={(<Mailbox />)}>
-          <Route path="" element={(<SidebarOffcanvas />)}>
-            <Route path="" element={(<Logout/>)}/>
-          </Route>
-        </ Route>
         <Route path="/employees" element={(<Employees />)}>
           <Route path="" element={(<SidebarOffcanvas />)}>
             <Route path="" element={(<Logout/>)}/>
