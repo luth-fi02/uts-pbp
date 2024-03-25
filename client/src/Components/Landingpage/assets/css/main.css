@@ -1899,6 +1899,9 @@ input::-moz-focus-inner {
   transition: all 0.5s ease-in-out;
   text-decoration: none;
 }
+.home-social a span {
+  color: #ffffff;
+}
 .home-social a:hover {
   border-bottom: 1px solid #ffffff;
 }
