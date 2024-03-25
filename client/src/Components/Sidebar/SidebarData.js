@@ -1,6 +1,5 @@
 import React from 'react'
 import HomeIcon from '@mui/icons-material/Home';
-import MailIcon from '@mui/icons-material/Mail';
 import GroupIcon from '@mui/icons-material/Group';
 import ChatIcon from '@mui/icons-material/Chat';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
@@ -18,11 +17,6 @@ export const SidebarData =[
         title: "Attendance",
         icon: <CoPresentIcon/>,
         link: "/attendance",
-    },
-    {
-        title: "Mailbox",
-        icon: <MailIcon/>,
-        link: "/mailbox",
     },
     {
         title: "Employees",
