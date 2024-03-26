@@ -14,7 +14,7 @@
     1. Register.  ✓ .  
     2. Login.  ✓ .  
     3. Log out.  ✓ .  
-    4. Forgot Password.
+    4. Forgot Password. (WIP)
 
 Client-only run.  
 cd client.  
