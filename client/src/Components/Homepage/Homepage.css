@@ -126,3 +126,20 @@
   font-size: 1.8rem;
   margin-bottom: 0;
 }
+
+.resetbutton {
+  font-family: "bold";
+  height: 45px;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .05);
+  cursor: pointer;
+  font-size: 12px;
+  color: #002b3e;
+  font-weight: 700;
+}
+
+.resetbutton:hover{
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}

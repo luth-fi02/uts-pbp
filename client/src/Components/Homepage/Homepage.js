@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useCallback, useContext } from "react";
 import "./Homepage.css";
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 import Image from "react-bootstrap/Image";
 import Button from "react-bootstrap/Button";
+import { SelfProfile } from "../helpers/Profile";
+import { AuthContext } from "../helpers/AuthContext"
+
 
 function Home() {
+  const { authState } = useContext(AuthContext);
+  let profile = SelfProfile();
+  let navigate = useNavigate();
+
   return (
     <div className="Page">
       <Outlet />
@@ -16,6 +23,8 @@ function Home() {
             <hr style={{ marginBottom: "2rem" }} />
             <h4 className="identity">Name</h4>
             <h3 className="value">John Terry</h3>
+            <h4 className="identity">Username</h4>
+            <h3 className="value">{profile.username}</h3>
             <h4 className="identity">Age</h4>
             <h3 className="value">22th</h3>
             <h4 className="identity">Gender</h4>
@@ -30,6 +39,14 @@ function Home() {
             <h3 className="value">082121212121</h3>
             <h4 className="identity">Address</h4>
             <h3 className="value">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
+            {authState.username === profile.username && ( 
+              <button 
+              className="resetbutton"
+              onClick={() => {
+                navigate("/resetpass")
+              }}
+              > Reset Password </button>
+            )}
           </div>
           <div className="container-right">
             <div className="image">

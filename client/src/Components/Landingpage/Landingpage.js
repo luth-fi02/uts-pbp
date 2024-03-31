@@ -12,7 +12,6 @@ import "./assets/css/Landingpage.css"
 import "./assets/css/base.css";
 import "./assets/css/main.css";
 import "./assets/css/slideshow.css";
-import Usercheck from "../helpers/Usercheck";
 import Getuser from "../helpers/Getuser";
 // import "./assets/css/vendor.css";
 
@@ -22,7 +21,7 @@ import Getuser from "../helpers/Getuser";
 // import "./assets/js/main.js";
 
 function Header() {
-    let check=Usercheck();
+    const [userdata, ] = Getuser();
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
@@ -87,14 +86,19 @@ function Header() {
                         </li>
                         
                         <li>
-                            { check ? (
+                            { userdata.status ? (
                             <a href="/homepage" title="login">
                                 Dashboard
                             </a>
                             ) : (
+                            <>
                             <a href="/login" title="login">
                                 Login
                             </a>
+                            <a href="/registration" title="login">
+                                 Register
+                            </a>
+                            </>
                             )}
                         </li>
                     </ul>
@@ -208,8 +212,7 @@ function Home() {
 }
 
 function NavbarComponents() {
-    let userdata = Getuser();
-    let check=Usercheck();
+    const [userdata, ] = Getuser();
     return (
         <Navbar data-bs-theme="light" className="navBar sticky-top p-4">
             <Container>
@@ -220,7 +223,7 @@ function NavbarComponents() {
                         height="60"
                         className="d-inline-block align-top"
                         alt="React Bootstrap logo"
-                    />
+                        />
                 </Navbar.Brand>
                 <Navbar.Brand className="nav-brand fs-3" href="#home">
                     Future Tech
@@ -233,7 +236,7 @@ function NavbarComponents() {
                 <Navbar.Collapse className="justify-content-end">
                     <Navbar.Text className="sign-in text-decoration-none">
                     Signed in as:{" "}
-                        { check ? (
+                        { userdata.status ? (
                             <a className="text-decoration-none" href="/homepage">
                             {userdata.username}
                             </a>

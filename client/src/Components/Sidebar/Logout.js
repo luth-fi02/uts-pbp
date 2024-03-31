@@ -20,10 +20,10 @@ function Logout() {
     className='row'
     onClick={logout}>
     <div id="icon">
-      <LogoutIcon/>
+      <LogoutIcon fontSize='inherit'/>
     </div>
     <div id="label">
-      Log Out
+      Logout
     </div>
     </li>
   )

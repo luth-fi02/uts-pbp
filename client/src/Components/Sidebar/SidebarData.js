@@ -38,9 +38,4 @@ export const SidebarData = [
         icon: <ForumIcon fontSize='inherit' />,
         link: "/forum",
     },
-    {
-        title: "Log Out",
-        icon: <LogoutIcon fontSize='inherit' />,
-        link: "/loginpage",
-    }
 ]

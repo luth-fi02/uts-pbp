@@ -41,7 +41,27 @@ router.get('/auth', validateToken, (req, res) => {
   res.json(req.user)
 });
 
-router.post('/passwordreset', validateToken, async (req, res) => {
+router.get("/profile", validateToken, async (req, res) => {
+  const id = req.user.id;
+
+  const basicInfo= await Users.findByPk(id, {
+    attributes: {exclude: ["password"]},
+  });
+
+  res.json(basicInfo)
+})
+
+router.get("/profile/:id", async (req, res) => {
+  const id = req.params.id;
+
+  const basicInfo= await Users.findByPk(id, {
+    attributes: {exclude: ["password"]},
+  });
+
+  res.json(basicInfo)
+})
+
+router.put('/passwordreset', validateToken, async (req, res) => {
   const {oldPassword, newPassword} = req.body;
   const user = await Users.findOne({where: {username: req.user.username}});
 

@@ -3,9 +3,11 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from 'yup';
 import "./Loginpage.css";
 import axios from "axios";
+import { useNavigate } from 'react-router-dom';
+
 
 function Registration() {
-
+    let navigate = useNavigate();
     const initialValues = {
         username: "",
         password: "",
@@ -19,46 +21,64 @@ function Registration() {
     const onSubmit = (data) => {
         axios.post("http://localhost:3001/auth", data). then((response) => {
         console.log(response)
+        navigate("/")
         });
     };
 
+
   return (
-    <div>
-        <div className='Registration'>
+    <div className='Loginpage'>
+        <div className='wrapper'>
+            <h1> Register </h1>
         <Formik   
                 initialValues={initialValues} 
                 onSubmit={onSubmit}
                 validationSchema={validationSchema} 
+                autocomplete="off"
             >
-                    <Form className='formContainer'>
+                    <Form className='Register'>
                         
-                        <label> Username:  </label>
+                    
                         <ErrorMessage name="username" component="span" />
                         <Field 
-                            id="inputAddPost" 
+                            className="input-box" 
                             name="username" 
-                            placeholder="(Ex.Yummy123)" 
+                            placeholder="Username..." 
                         />
 
-                        <label> Passsword:  </label>
+                 
                         <ErrorMessage name="password" component="span" />
                         <Field 
-                            id="inputAddPost" 
+                            className="input-box" 
                             type="password"
                             name="password" 
-                            placeholder="(Your Password...)" 
+                            placeholder="Password..." 
                         />
-            
-
 
                         <button type='submit'>
                             Register
                         </button>
                     </Form>
-            </Formik>
-            </div>
+        </Formik>
+        <div className='register-link'>
+            <p> 
+              Already have an account? 
+              <a href="/login" > 
+              Login 
+              </a> 
+            </p>  
+        </div>
+        <div className='register-link'>
+            <p> 
+              Return to  {" "} 
+              <a href="/" > 
+              Home
+              </a> 
+            </p>  
+        </div>    
+        </div>
     </div>
   )
 }
 
-export default Registration
+export default Registration;

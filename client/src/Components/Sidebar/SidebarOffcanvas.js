@@ -4,6 +4,7 @@ import { SidebarData } from "./SidebarData";
 import Image from "react-bootstrap/Image";
 import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArrowRight";
 import KeyboardDoubleArrowLeftIcon from "@mui/icons-material/KeyboardDoubleArrowLeft";
+import { Outlet } from 'react-router-dom';
 
 export default function SidebarOffcanvas() {
   const [show, setShow] = useState(false);
@@ -41,7 +42,12 @@ export default function SidebarOffcanvas() {
         scroll={true}
         style={{ width: "37rem", padding: '0 1rem' }}
       >
-        <Offcanvas.Header style={{ padding: "1.7rem 1.5rem" }}>
+        <Offcanvas.Header 
+        style={{ padding: "1.7rem 1.5rem" }}
+        className="sidebar-title0"
+        onClick={() => {
+          window.location.pathname = ("/");
+        }}>
           <Image
             className="avatar"
             style={{ width: "40px" }}
@@ -55,7 +61,8 @@ export default function SidebarOffcanvas() {
               marginTop: "2.5px",
             }}
           >
-            <span className="sidebar-title">Future</span> Tech
+              <span className="sidebar-title">
+              Future</span> Tech
           </Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body style={{ overflow: "hidden" }}>
@@ -75,6 +82,7 @@ export default function SidebarOffcanvas() {
                 </li>
               );
             })}
+            <Outlet/>
           </ul>
         </Offcanvas.Body>
         <div

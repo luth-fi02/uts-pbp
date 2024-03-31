@@ -1,5 +1,8 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import LogoutIcon from '@mui/icons-material/Logout';
+import { useNavigate } from 'react-router-dom';
+import "../Sidebar/Sidebar.css";
 
 export default function Getuser (){
   const [authState, setAuthState] = useState({
@@ -22,5 +25,25 @@ export default function Getuser (){
         }
       })
     }, [])
-  return authState;
+  return [authState, setAuthState];
+}
+
+export function Logout() {  
+  let navigate = useNavigate()
+  const logout = () => {
+    localStorage.removeItem("accessToken");
+    navigate('/ ');
+  } 
+  return (
+  <li 
+  className='row'
+  onClick={logout}>
+  <div id="icon">
+    <LogoutIcon/>
+  </div>
+  <div id="label">
+    Log Out
+  </div>
+  </li>
+)
 }

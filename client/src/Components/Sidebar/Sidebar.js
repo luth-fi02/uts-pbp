@@ -26,7 +26,8 @@ function Sidebar() {
            </div>
          </li>
          )
-       })}
+        })}
+      <Outlet/>
       </ul>
     </div>
   )

@@ -12,10 +12,13 @@ import Logout from './Components/Sidebar/Logout';
 import AddPost from './Components/Forum/AddPost';
 import Post from './Components/Forum/Post';
 import Attendance from "./Components/Attendance/Attendance";
+import Getuser from './Components/helpers/Getuser';
+import PageNotFound from './Components/PageNotFound/PageNotFound';
+import Profile from './Components/helpers/Profile';
+import Resetpass from './Components/Loginpage/ResetPass';
+
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-import { AuthContext } from "./Components/helpers/AuthContext";
-import { useState, useEffect } from 'react';
-import axios from 'axios';
+import { AuthContext } from './Components/helpers/AuthContext';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "animate.css"
 import AOS from 'aos';
@@ -24,29 +27,16 @@ import 'aos/dist/aos.css';
 AOS.init()
 
 function App() {
-  const [authState, setAuthState] = useState(false)
-  useEffect(() => {
-    axios.get('http://localhost:3001/auth/auth', {
-      headers: {
-        accessToken: localStorage.getItem('accessToken'),
-      }
-    }).then((response) => {
-      if (response.data.error) {
-        setAuthState(false)
-      } else {
-        setAuthState(true);
-      }
-    })
-  }, [])
+  const [authState, setAuthState] = Getuser();
   return (
     <AuthContext.Provider value={{ authState, setAuthState }}>
       <Router>
         <div className='App'>
           <Routes>
             <Route path="/" element={(<Landingpage />)} />
-            <Route path="/registration" element={(<Registration />)} />
-            <Route path="/login" element={(<Login />)} />
-            {authState && (
+            <Route path="/login" element={(<Login/>)}/>
+            <Route path="/*" element={(<PageNotFound/>)}/>
+            {authState.status ? (
               <>
                 <Route path="/homepage" element={(<Homepage />)}>
                   <Route path="" element={(<SidebarOffcanvas />)}>
@@ -88,12 +78,35 @@ function App() {
                     <Route path="" element={(<Logout />)} />
                   </Route>
                 </Route>
+                <Route path="/postby/:id" element={(<Profile/>)}>
+                  <Route path="" element={(<SidebarOffcanvas />)}>
+                    <Route path="" element={(<Logout />)} />
+                  </Route>
+                </ Route>
+                <Route path="/resetpass" element={(<Resetpass/>)}>
+                  <Route path="" element={(<SidebarOffcanvas />)}>
+                    <Route path="" element={(<Logout />)} />
+                  </Route>
+                </ Route>
+              </>
+            ) : (
+              <>
+                <Route path="/registration" element={(<Registration />)} />
+                <Route path="/login" element={(<Login />)} />
+                <Route path="/homepage" element={(<Landingpage />)}/>
+                <Route path="/attendance" element={(<Landingpage />)}/>
+                <Route path="/employees" element={(<Landingpage />)}/>
+                <Route path="/messenger" element={(<Landingpage />)}/>
+                <Route path="/schedule" element={(<Landingpage />)}/>
+                <Route path="/forum" element={(<Landingpage />)}/>
+                <Route path="/post/:id" element={(<Landingpage />)}/>
+                <Route path="addpost" element={(<Landingpage />)}/>
               </>
             )}
           </Routes>
         </div>
       </Router>
-  </AuthContext.Provider>
+    </AuthContext.Provider>
   );
 }
 
