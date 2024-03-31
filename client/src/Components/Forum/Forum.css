@@ -184,3 +184,24 @@ column-gap: 10px;
  .addpostpage .input-boxtext::placeholder {
   text-align: start;
  }
+
+ .listOfComments {
+  width: inherit;
+  height: auto;
+  margin: 25px;
+  background: #002b3e;
+  border: none;
+  outline: none;
+  border: 2px solid rgba(49, 49, 49, 0.479);
+  border-radius: 40px;
+  font-size: 16px;
+  color: #edf1f2;
+  padding: 20px 45px 20px 20px;
+ }
+
+ .byUser{
+  display: flex;
+  flex-direction: row;
+  column-gap: 5px;
+  font-size: 12px;
+}

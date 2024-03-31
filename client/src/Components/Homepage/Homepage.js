@@ -22,23 +22,23 @@ function Home() {
             <h2 className="title">General Information</h2>
             <hr style={{ marginBottom: "2rem" }} />
             <h4 className="identity">Name</h4>
-            <h3 className="value">John Terry</h3>
+            <h3 className="value">{profile.realname}</h3>
             <h4 className="identity">Username</h4>
             <h3 className="value">{profile.username}</h3>
             <h4 className="identity">Age</h4>
-            <h3 className="value">22th</h3>
+            <h3 className="value">{profile.age}</h3>
             <h4 className="identity">Gender</h4>
-            <h3 className="value">Male</h3>
+            <h3 className="value">{profile.gender}</h3>
             <h4 className="identity">Birth date</h4>
-            <h3 className="value">27 December 2003</h3>
+            <h3 className="value">{profile.birthdate}</h3>
             <h4 className="identity">Status</h4>
-            <h3 className="value">Not married</h3>
+            <h3 className="value">{profile.statu}</h3>
             <h4 className="identity">Email</h4>
-            <h3 className="value">JohnTerry@gmail.com</h3>
+            <h3 className="value">{profile.email}</h3>
             <h4 className="identity">Phone Number</h4>
-            <h3 className="value">082121212121</h3>
+            <h3 className="value">{profile.phonenumber}</h3>
             <h4 className="identity">Address</h4>
-            <h3 className="value">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
+            <h3 className="value">{profile.address}</h3>
             {authState.username === profile.username && ( 
               <button 
               className="resetbutton"
@@ -63,9 +63,9 @@ function Home() {
             </div>
             <div className="info">
               <h4 className="identity">Title</h4>
-              <h3 className="value">Project Manager</h3>
+              <h3 className="value">{profile.title}</h3>
               <h4 className="identity">Salary</h4>
-              <h3 className="value">Rp. 12.000.000 / month</h3>
+              <h3 className="value">{profile.salary}</h3>
             </div>
           </div>
         </div>

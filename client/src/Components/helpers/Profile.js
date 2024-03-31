@@ -73,6 +73,16 @@ export function SelfProfile() {
       setUsername({
         username: response.data.username,
         id: response.data.id,
+        realname: response.data.realname,
+        age: response.data.age,
+        gender: response.data.gender,
+        birthdate: response.data.birthdate,
+        statu: response.data.statu,
+        email: response.data.email,
+        phonenumber: response.data.phonenumber,
+        address: response.data.address,
+        title: response.data.title,
+        salary: response.data.salary,
       });
     });
   }, []);

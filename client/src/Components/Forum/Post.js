@@ -94,8 +94,8 @@ function Post() {
     
 
   return (
-    <div className='Page'>
-        <div className='Content'>
+    <div>
+        <div>
             
             <Outlet />
 
@@ -151,9 +151,9 @@ function Post() {
                     return (
                       <div className='comment'>
                         {comment.commentBody}
-                        <div> from : {comment.username} </div>
+                        <div className='byUser'> from : {comment.username} </div>
                         {authState.username === comment.username && 
-                        <button onClick={() => {deleteComment(comment.id)}}> Delete </button>}
+                        <button onClick={() => {deleteComment(comment.id)}}> Delete Comment</button>}
                       </div>
                     )
                   })}

@@ -9,6 +9,56 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         allowNull: false,
       },
+
+      realname: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      age: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+
+      gender: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+
+      birthdate: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+
+      statu: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+
+      email: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+
+      phonenumber: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+
+      address: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+
+      title: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+
+      salary: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+
     });
  
     Users.associate = (models) => {
