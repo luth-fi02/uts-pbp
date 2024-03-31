@@ -7,7 +7,10 @@
 }
 
 .attendance-content {
-  padding: 2rem;
+  margin-top: 3rem;
+  padding: 3rem;
+  background-color: #fff;
+  border-radius: 20px;
 }
 
 .attendance-content .attendance-title {
@@ -27,4 +30,26 @@
 .attendance-content .thead-tr {
   font-family: "bold";
   font-size: 10rem;
+}
+
+.chart-container {
+  margin-left: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.chart-container .line-chart,
+.chart-container .bar-chart,
+.chart-container .doughnut-chart {
+  margin-top: 3rem;
+  padding: 3rem;
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+.chart-container .line-chart .line-chart-title,
+.chart-container .bar-chart .bar-chart-title,
+.chart-container .doughnut-chart .doughnut-chart-title {
+  font-family: "bold";
+  margin-bottom: 2rem;
 }
