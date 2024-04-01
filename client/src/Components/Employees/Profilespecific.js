@@ -1,30 +1,40 @@
-import React, { useCallback, useContext } from "react";
-import "./Homepage.css";
-import { Outlet, useNavigate } from "react-router-dom";
+import React, { useEffect, useContext, useState } from "react";
+import "../Homepage/Homepage.css";
+import { Outlet, useNavigate, useParams } from "react-router-dom";
 import Image from "react-bootstrap/Image";
 import Button from "react-bootstrap/Button";
-import { SelfProfile } from "../helpers/Profile";
 import { AuthContext } from "../helpers/AuthContext"
+import axios from "axios";
 
 
-function Home() {
+
+function Profilespecific() {
   const { authState } = useContext(AuthContext);
-  const profile = SelfProfile([]);
+
+  let{ id } = useParams();
+  const [profile, setUsername] = useState([]);
+
+  useEffect(() => {
+    axios.get(`http://localhost:3001/auth/profile/${id}`)
+    .then((response) => {
+      setUsername(response.data)
+      console.log(response.data)
+    });
+  }, []);
+
   let navigate = useNavigate();
 
   return (
     <div className="Page">
       <Outlet />
       <div className="home-content">
-        <h1 className="main-title">Your Profile</h1>
+        <h1 className="main-title">Showing {profile.username}'s' Profile</h1>
         <div className="container-left">
           <div className="detail">
             <h2 className="title">General Information</h2>
             <hr style={{ marginBottom: "2rem" }} />
             <h4 className="identity">Name</h4>
             <h3 className="value">{profile.realname}</h3>
-            <h4 className="identity">Username</h4>
-            <h3 className="value">{profile.username}</h3>
             <h4 className="identity">Age</h4>
             <h3 className="value">{profile.age}</h3>
             <h4 className="identity">Gender</h4>
@@ -74,4 +84,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Profilespecific;

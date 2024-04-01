@@ -62,31 +62,32 @@ function Profile() {
 export default Profile;
 
 export function SelfProfile() {
-  const [username, setUsername] = useState("");
+  const [username, setUsername] = useState([]);
 
   useEffect(() => {
     axios.get(`http://localhost:3001/auth/profile`,  { headers: {
       accessToken: localStorage.getItem('accessToken'),
     }})
     .then((response) => {
-      console.log(response.data)
-      setUsername({
-        username: response.data.username,
-        id: response.data.id,
-        realname: response.data.realname,
-        age: response.data.age,
-        gender: response.data.gender,
-        birthdate: response.data.birthdate,
-        statu: response.data.statu,
-        email: response.data.email,
-        phonenumber: response.data.phonenumber,
-        address: response.data.address,
-        title: response.data.title,
-        salary: response.data.salary,
-      });
+      setUsername(response.data);
     });
   }, []);
 
 
 return username;
+}
+
+export function GetProfile(){
+  const [username, setUsername] = useState([]);
+
+  useEffect(() => {
+    axios.get(`http://localhost:3001/auth/profileall`)
+    .then((response) => {
+      console.log(response.data)
+      setUsername(response.data);
+    });
+  }, []);
+
+  
+  return username;
 }

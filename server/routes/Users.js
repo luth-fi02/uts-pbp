@@ -74,6 +74,14 @@ router.get("/profile", validateToken, async (req, res) => {
   res.json(basicInfo)
 })
 
+router.get("/profileall", async (req, res) => {
+  const basicInfo= await Users.findAll({
+    attributes: {exclude: ["password"]}
+  });
+
+  res.json(basicInfo)
+})
+
 router.get("/profile/:id", async (req, res) => {
   const id = req.params.id;
 

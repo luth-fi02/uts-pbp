@@ -51,6 +51,18 @@
   align-items: center;
 }
 
+.employees-container .cards-container .header .headercontent {
+  display: flex;
+  flex-direction: row;
+  column-gap: 10px;
+}
+.employees-container .cards-container .header .headercontent:hover {
+  cursor: pointer;
+  background: #002b3e0e;
+  border-radius: 10px;
+  padding: 5px;
+}
+
 .employees-container .cards-container .header .header-text {
   display: flex;
   flex-direction: column;

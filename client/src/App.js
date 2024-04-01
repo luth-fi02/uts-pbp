@@ -16,6 +16,7 @@ import Getuser from './Components/helpers/Getuser';
 import PageNotFound from './Components/PageNotFound/PageNotFound';
 import Profile from './Components/helpers/Profile';
 import Resetpass from './Components/Loginpage/ResetPass';
+import Profilespecific from './Components/Employees/Profilespecific';
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { AuthContext } from './Components/helpers/AuthContext';
@@ -84,6 +85,11 @@ function App() {
                   </Route>
                 </ Route>
                 <Route path="/resetpass" element={(<Resetpass/>)}>
+                  <Route path="" element={(<SidebarOffcanvas />)}>
+                    <Route path="" element={(<Logout />)} />
+                  </Route>
+                </ Route>
+                <Route path="/profile/:id" element={(<Profilespecific />)}>
                   <Route path="" element={(<SidebarOffcanvas />)}>
                     <Route path="" element={(<Logout />)} />
                   </Route>
