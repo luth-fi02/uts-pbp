@@ -35,7 +35,7 @@ function Employees() {
               <Card data-aos="zoom-in-up"
                 data-aos-duration="1000" data-aos-delay={delay(i)} key={i} border="light" style={{ width: "38rem" }}>
                 <Card.Header className="header">
-                  <div className="headercontent" onClick={() => navigate(`/post/${employee.id}`)}>
+                  <div className="headercontent" onClick={() => navigate(`/profile/${employee.id}`)}>
                     <Image
                       style={{ width: "40px", height: "40px" }}
                       src="../../../ceo.jpg"
